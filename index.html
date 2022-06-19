@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div>
+        <form id="formulario" name = " formulario">
+
+             <div>
+                 <label for="email" style="padding-left:25px"> email </label>
+                 <input  class ="email" type="email">
+             </div>
+
+             <div>
+                <label for="password">password</label>
+                <input  class ="password" type="password">
+            </div>
+
+                <div  style="padding-left:65px ;">
+                <button  type="submit">ingrese aqui</button>
+             </div>
+            
+        </form>
+     </div>
+
+     <p class="resultado"></p>
+
+      
+<script>
+
+
+
+let login=(event)=>{
+
+    event.preventDefault();
+
+    let email = document.querySelector(".email");
+    let password = document.querySelector(".password");
+
+       alert(`Ingreso exitoso ${email.value}`)
+                    }
+
+let formulario = document.getElementById("formulario");
+formulario.addEventListener("submit" , login);
+
+
+let botton  = document.getElementById
+
+</script>
+
+
+</body>
+</html>
+
+
