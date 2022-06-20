@@ -7,24 +7,61 @@ initial-scale=1.0">
 <title>Document</title>
 </head>
 <body>
+<div class="contenedor">
+<div class="buscador">
+<input class="input-a-buscar" type="text" name="buscador">
+<button id="boton" type="button">Buscar</button>
+
+<div>
+<p class="error" style="color: red"></p>
+</div>
+
+</div>
+<p class="resultado"></p>
+</div>
 
 
 
-    <div class="contenedor">
-        <form id="formulario" name="formulario">
-        <div>
-        <label for="correo">Correo Electrónico: </label>
-        <input class="correo" type="email" >
-        </div>
-        <button type="submit">Registrar</button>
-        </form>
-        </div>
-        
+<script>
 
-   
 
-   <script>
-   
+
+
+let buscador = document.getElementById("boton");
+buscador.addEventListener('click',function (){ 
+    let texto= document.querySelector(".input-a-buscar");
+  if(texto.value !==""){document.querySelector(".resultado").innerHTML =`Estas buscando: ${
+texto.value}`}else {    
+document.querySelector(".error").innerHTML = "Para poder buscar debes ingresar una palabra";
+};
+})
+
+
+ 
+ 
+/*
+Ejercicio propuesto (6)
+Un sitio web necesita implementar un pequeño formulario para registrar el correo de los
+usuarios que deseen recibir notificaciones. Para ello, debes validar el ingreso del dato en el
+campo del correo antes de poder procesar la información, es decir, el campo no puede estar
+sin datos, por esta razón, cuando el usuario haga un click sobre el botón el campo debe
+revisarse y verificar que contenga dato.
+Esta condición se debe mostrar en un mensaje en el caso de no existir dato alguno en el
+campo indicando que “debe existir un correo electrónico para poder registrarse”, de existir
+dato se debe mostrar, ejemplo: “tu correo electrónico usuario@correo.com fue registrado
+con éxito.” todo esto mediante un alert.
+<div class="contenedor">
+<form id="formulario" name="formulario">
+<div>
+<label for="correo">Correo Electrónico: </label>
+<input class="correo" type="email" >
+</div>
+<button type="submit">Registrar</button>
+</form>
+</div>
+
+
+
     let login = ()=>{   
       let  correo = document.querySelector(".correo");
 
@@ -35,14 +72,15 @@ con éxito.  `)}else{ alert ("debe existir un correo electrónico para poder reg
                     }           
        
    let formulario = document.getElementById("formulario");
-     formulario.addEventListener("submit", login)
+     formulario.addEventListener("submit", login) */
 
 
 
 
-    </script>
 
+
+
+</script>
 </body>
 </html>
-
 
